@@ -1,0 +1,483 @@
+# PROJECT: F1RST BANK OF NIGERIA — FULL DIGITAL BANKING PLATFORM
+
+Act as a senior fintech product designer, banking software architect, full-stack developer, cybersecurity engineer, and database specialist.
+
+Build a modern, responsive, premium-quality digital banking website and online banking platform named **F1RST BANK OF NIGERIA**.
+
+The platform should deliver a polished, trustworthy Nigerian banking experience, with a professional corporate website, customer online banking portal, and secure administrative dashboard.
+
+The design should feel modern, reliable, premium, fast, accessible, and suitable for Nigerian individuals, students, entrepreneurs, SMEs, and corporate customers.
+
+IMPORTANT: Treat this project as an independent banking software concept unless the organization has confirmed authorization to operate as a bank. Do not falsely claim affiliation with FirstBank of Nigeria or any existing financial institution. Use fictional demo data and clearly label the application as a demo until the business's legal identity, licensing, payment integrations, and regulatory approvals are verified.
+
+## 1. BRAND IDENTITY AND DESIGN
+
+Brand name: F1RST BANK OF NIGERIA
+
+Tagline: "Banking Beyond Boundaries."
+
+Brand personality:
+- Trustworthy
+- Innovative
+- Secure
+- Professional
+- Customer-focused
+- Future-ready
+
+Visual design:
+- Deep navy blue as the primary color
+- Rich royal blue for buttons and navigation accents
+- White and light gray backgrounds
+- Restrained gold accents for premium highlights
+- Modern typography such as Inter or Manrope
+- Clean cards, subtle shadows, rounded corners, and elegant spacing
+- Smooth, subtle animations and loading states
+- Professional financial illustrations and abstract geometric patterns
+
+Create an original logo concept using the text "F1RST BANK OF NIGERIA". Do not copy the trademarked logo or branding of another bank.
+
+Ensure the website works perfectly on desktop, tablets, and mobile devices.
+
+## 2. PUBLIC WEBSITE
+
+Create the following public-facing pages:
+
+### Homepage
+- Professional navigation bar
+- Logo and brand identity
+- Hero section with a headline: "Your Money. Your Future. Your Bank."
+- Supporting text explaining convenient digital banking
+- Prominent buttons: "Open an Account", "Sign In", and "Explore Our Services"
+- Account and service highlights
+- Personal banking and business banking sections
+- Security and customer protection section
+- Savings and financial planning highlights
+- Customer testimonials using clearly identified sample content
+- Frequently asked questions
+- Contact information and footer
+
+### About Us
+- Company overview
+- Mission and vision
+- Values and customer commitment
+- Leadership section populated only with verified information
+- Corporate responsibility
+
+### Personal Banking
+- Savings accounts
+- Current accounts
+- Student accounts
+- Salary accounts
+- Joint accounts
+- Fixed-term deposits
+- Account comparison table
+- Eligibility and account opening information
+
+### Business Banking
+- SME accounts
+- Corporate accounts
+- Business payments
+- Bulk payment management
+- Merchant payment solutions
+- Cash-flow management
+- Business account application
+
+### Products and Services
+- Domestic transfers
+- International transfers, subject to availability and compliance
+- Debit and virtual cards
+- Bill payments
+- Airtime and data purchases
+- Savings products
+- Loans and credit facilities, subject to eligibility and approval
+- Merchant and business payment services
+
+### Other pages
+- Help center
+- FAQs
+- Contact us
+- Branch and ATM locator
+- Careers
+- Terms and conditions
+- Privacy policy
+- Cookie policy
+- Fees and charges
+- Complaints and dispute resolution
+- Security awareness center
+
+Do not invent real branch addresses, telephone numbers, regulatory registrations, interest rates, or product terms.
+
+## 3. CUSTOMER REGISTRATION AND LOGIN
+
+Create a complete authentication interface with:
+
+- Customer registration
+- Email and phone number verification
+- Secure login
+- Password reset
+- Multi-factor authentication
+- One-time password verification using a real provider in production
+- Session expiration and logout
+- Device and session management
+- Optional biometric authentication on supported devices
+- Account recovery
+- Login notifications
+- Failed login protection
+- Rate limiting and suspicious-login detection
+
+For registration, provide fields for:
+- Full legal name
+- Email address
+- Phone number
+- Date of birth where legally appropriate
+- Password
+- Consent to privacy terms
+- Required identity verification steps
+
+For Nigerian account onboarding, design support for BVN and NIN verification through authorized providers. Never expose, log, or store sensitive identity information unnecessarily.
+
+Do not allow users to bypass required identity verification or account eligibility checks.
+
+## 4. CUSTOMER BANKING DASHBOARD
+
+After successful login, display a personalized dashboard containing:
+
+- Welcome message
+- Customer profile
+- Total account balance
+- Available balance
+- Savings summary
+- Account numbers displayed with privacy controls
+- Recent transactions
+- Income and expense summary
+- Quick action buttons
+- Notifications
+- Pending transfers
+- Card status
+- Security alerts
+- Support shortcut
+
+Quick actions:
+1. Transfer money
+2. Buy airtime
+3. Buy mobile data
+4. Pay bills
+5. Manage cards
+6. View statements
+7. Save money
+8. Contact support
+
+Allow customers to hide or reveal balances with a privacy toggle.
+
+Use realistic but entirely fictional demo data in prototype mode.
+
+## 5. ACCOUNT MANAGEMENT
+
+Implement interfaces for:
+
+- Viewing account details
+- Multiple accounts
+- Savings and current accounts
+- Account nicknames
+- Account status
+- Account activity
+- Transaction history
+- Downloadable account statements
+- PDF and CSV statement exports
+- Account notifications
+- Beneficiary management
+- Profile updates
+- Address updates
+- Security preferences
+- Account closure requests
+
+Any sensitive changes must require appropriate reauthentication and additional verification.
+
+## 6. MONEY TRANSFERS
+
+Build a complete transfer workflow.
+
+Supported transfer categories:
+- Between a customer's own accounts
+- Transfers to other customers within the platform
+- Nigerian interbank transfers
+- International transfers where supported by licensed partners
+
+Transfer workflow:
+1. Select the source account.
+2. Enter the recipient's bank and account number.
+3. Verify the recipient through an authorized bank-account name enquiry service.
+4. Enter the transfer amount.
+5. Enter a payment description.
+6. Display applicable fees and limits before confirmation.
+7. Display the recipient and transfer summary.
+8. Require transaction authorization.
+9. Submit the transfer to the payment service.
+10. Display pending, successful, or failed status.
+11. Generate a unique transaction reference.
+12. Provide a downloadable receipt.
+
+Include:
+- Saved beneficiaries
+- Transfer limits
+- Duplicate transaction prevention
+- Idempotency keys
+- Transaction status reconciliation
+- Reversal and dispute workflows
+- Fraud monitoring
+- Clear error messages
+- Notifications after transactions
+
+Never mark a transfer successful simply because the frontend button was clicked. Only the verified backend payment result can determine its status.
+
+In demo mode, simulate transfers without moving real money and clearly label them as simulated.
+
+## 7. AIRTIME, DATA AND BILL PAYMENTS
+
+Build interfaces for:
+- Airtime top-ups
+- Mobile data bundles
+- Electricity bills
+- Television subscriptions
+- Internet subscriptions
+- Other supported billers
+
+Support a provider-integration architecture for Nigerian service providers.
+
+Payment workflow:
+- Select provider
+- Select product
+- Enter phone, meter, or customer number
+- Validate the details
+- Display amount and fees
+- Confirm the transaction
+- Authorize the payment
+- Show transaction status
+- Generate a receipt
+- Allow status checks for pending transactions
+
+Do not fabricate successful payments in production. Use sandbox services for development and verified provider responses for live payments.
+
+## 8. CARD MANAGEMENT
+
+Build a modern card-management page with:
+
+- Debit card overview
+- Virtual card interface
+- Masked card details
+- Card activation
+- Card freezing and unfreezing
+- Card replacement requests
+- PIN change workflow through an authorized secure service
+- Online payment controls
+- International payment controls
+- Spending limits
+- Card transaction history
+- Lost or stolen card reporting
+
+Never expose full card numbers, CVVs, or PINs in application logs. Do not store raw card data unless the system has the appropriate certified infrastructure and authorization.
+
+## 9. SAVINGS AND FINANCIAL TOOLS
+
+Create:
+- Savings goals
+- Goal progress indicators
+- Automatic savings scheduling
+- Recurring savings contributions
+- Fixed-term savings product information
+- Savings calculators
+- Budget planner
+- Monthly income and expense charts
+- Spending categories
+- Financial insights
+- Savings reminders
+
+Display product rates, returns, and terms only when verified and approved.
+
+Clearly explain whether a displayed savings feature is a simulation or a live financial product.
+
+## 10. LOANS AND CREDIT APPLICATIONS
+
+Create a loan application interface with:
+
+- Loan product selection
+- Eligibility questionnaire
+- Requested amount
+- Repayment period
+- Repayment calculator
+- Estimated installment breakdown
+- Application submission
+- Application tracking
+- Document submission through a secure process
+- Approval or rejection status
+- Repayment schedule
+- Payment history
+
+Use transparent pricing and clearly explain fees and interest. Do not imply that an application is approved before the appropriate decision process is complete.
+
+## 11. NOTIFICATIONS AND CUSTOMER SUPPORT
+
+Implement:
+- In-app notifications
+- Transaction notifications
+- Login alerts
+- Password-change alerts
+- Transfer status alerts
+- Card activity alerts
+- Email and SMS notification integration
+- Notification preferences
+- Support ticket creation
+- Live chat integration point
+- Complaint tracking
+- Frequently asked questions
+- Secure messaging
+
+Use real notification providers in production and a mock notification service in demo mode.
+
+## 12. ADMINISTRATIVE DASHBOARD
+
+Create a separate, protected administration portal.
+
+Admin dashboard features:
+- Customer account overview
+- Customer onboarding review
+- Identity verification status
+- Account status management
+- Transaction monitoring
+- Transfer investigation
+- Pending transaction review
+- Fraud and suspicious-activity alerts
+- Customer support ticket management
+- Payment reconciliation
+- Fees and limits configuration
+- Product configuration
+- Notification management
+- Audit log viewer
+- Operational reports
+- System health monitoring
+- Role and permission management
+
+Administrative roles:
+- Super administrator
+- Compliance officer
+- Customer support agent
+- Operations officer
+- Finance and reconciliation officer
+- Read-only auditor
+
+Apply role-based access control and least-privilege permissions.
+
+Require multi-factor authentication for privileged users. Record sensitive administrative actions in tamper-resistant audit logs.
+
+Do not give support agents unrestricted access to customer credentials, PINs, passwords, or full payment-card details.
+
+## 13. DATABASE AND BACKEND ARCHITECTURE
+
+Build a maintainable backend with a relational database such as PostgreSQL.
+
+Suggested entities:
+- users
+- customer_profiles
+- accounts
+- account_balances
+- transactions
+- transfer_requests
+- beneficiaries
+- cards
+- bill_payments
+- savings_goals
+- loan_applications
+- notifications
+- support_tickets
+- verification_records
+- user_sessions
+- audit_logs
+- roles
+- permissions
+- payment_webhooks
+- reconciliation_records
+
+Use unique identifiers, foreign keys, appropriate indexes, validation, and timestamps.
+
+For financial transactions, use a double-entry ledger with balanced debit and credit entries. Maintain immutable transaction records and a complete audit trail.
+
+Do not treat a client-provided balance as authoritative. Derive balances from the trusted ledger and reconciled financial records.
+
+Use database transactions and concurrency controls to prevent race conditions and inconsistent balances.
+
+Use database migrations, automated tests, structured error handling, and clear API documentation.
+
+## 14. RECOMMENDED TECHNOLOGY STACK
+
+Frontend:
+- Next.js with TypeScript
+- React
+- Tailwind CSS
+- Accessible UI component library
+- Charting library for financial analytics
+
+Backend:
+- Next.js server routes or a dedicated secure backend service
+- TypeScript
+- REST API with documented schemas
+
+Database:
+- PostgreSQL
+- Prisma ORM or another established ORM
+
+Authentication:
+- A secure authentication provider or professionally implemented session-based authentication
+- Secure, HTTP-only cookies
+- Multi-factor authentication
+
+Infrastructure:
+- Managed hosting with TLS
+- Managed PostgreSQL
+- Secret management
+- Centralized logging and monitoring
+- Automated backups
+- CI/CD pipeline
+- Separate development, staging, and production environments
+
+Integrations should be abstracted behind server-side adapters so authorized providers can be connected without rewriting the frontend.
+
+## 15. SECURITY AND REGULATORY READINESS
+
+Treat banking security as a core requirement, not an optional feature.
+
+Implement:
+- TLS for all network traffic
+- Secure password hashing
+- Multi-factor authentication
+- Role-based authorization
+- Server-side validation
+- CSRF protection where applicable
+- XSS and injection defenses
+- Rate limiting
+- Secure session management
+- Secrets stored outside source code
+- Encryption for sensitive data
+- Audit logging
+- Fraud detection integration points
+- Transaction signing or step-up authorization where appropriate
+- Idempotent payment processing
+- Secure webhook signature verification
+- Backup and disaster recovery procedures
+- Vulnerability scanning
+- Penetration testing before production
+- Data retention and privacy controls
+
+Design for applicable Nigerian banking and data-protection obligations, including relevant CBN requirements, NDPA obligations, applicable payment-system rules, and PCI DSS where card-data scope requires it. Obtain qualified legal, compliance, and security review before launch.
+
+Never store passwords, OTPs, PINs, or CVVs in plaintext.
+
+Do not embed secret API keys in frontend code.
+
+## 16. USER EXPERIENCE AND ACCESSIBILITY
+
+Make the application:
+- Mobile-first
+- Fast-loading
+- Keyboard accessible
+- Screen-reader friendly
+- Responsive across common
